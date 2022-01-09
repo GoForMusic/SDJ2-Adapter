@@ -10,36 +10,41 @@ public class Queue implements StringQueue{
 
     @Override
     public void enqueue(String element) {
-        
+        if(element == null) throw new IllegalArgumentException("Cannot enqueue null");
+        list.add(element);
     }
 
     @Override
     public String dequeue() {
-        return null;
+        if(list.isEmpty()) throw new IllegalStateException("Queue is empty");
+
+
+        return list.remove(0);
     }
 
     @Override
     public String first() {
-        return null;
+        if(list.isEmpty()) throw new IllegalStateException("Queue is empty");
+        return list.get(0);
     }
 
     @Override
     public int size() {
-        return 0;
+        return list.size();
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return list.isEmpty();
     }
 
     @Override
     public int indexOf(String element) {
-        return 0;
+        return list.indexOf(element);
     }
 
     @Override
     public boolean contains(String element) {
-        return false;
+        return list.contains(element);
     }
 }
