@@ -1,14 +1,25 @@
 import java.util.Date;
 
 public class Person {
-    public String name;
-    public int ssn;
-    public Date dob;
+    private String name;
+    private String dateOfBirth;
+    private int socialSecurityNumber;
 
-    public Person(String name, int ssn, Date dob){
-        this.name=name;
-        this.ssn=ssn;
-        this.dob=dob;
+    public Person(String name, int socialSecurityNumber,String dateOfBirth) {
+        this.name = name;
+        this.dateOfBirth = dateOfBirth;
+        this.socialSecurityNumber = socialSecurityNumber;
     }
 
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getSocialSecurityNumber() {
+        return socialSecurityNumber;
+    }
 }

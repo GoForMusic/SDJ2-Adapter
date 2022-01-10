@@ -1,4 +1,4 @@
 public interface PersonStorage {
-    void addPerson(Person p);
+    void addPerson(Person prsn);
     Person getPerson(int ssn);
 }
